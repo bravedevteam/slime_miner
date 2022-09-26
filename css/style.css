@@ -140,9 +140,9 @@ textarea::placeholder { color:rgba(0,0,0,0.3); }
 .pc { display:block !important; }
 .mo { display:none !important; }
 
-#wrap { min-height:100%; position:relative; padding-bottom:130px; background:url('../images/bgMain.jpg') center top no-repeat; background-size:cover; }
+#wrap { min-height:100%; position:relative; padding:0 280px 130px; background:url('../images/bgMain.jpg') center top no-repeat; background-size:cover; }
 
-#aside { width:230px; height:100%; padding-top:62px; position:absolute; left:0; top:0; background:#ffd548; border-right:6px solid #000; z-index:5; }
+#aside { width:230px; height:100%; padding-top:62px; position:absolute; left:0; top:0; background:#ffd548; border-right:6px solid #000; z-index:15; }
 #aside h1 { width:168px; height:68px; margin-bottom:53px; margin-left:39px; background:url('../images/imgSideLogo.png') center center no-repeat; background-size:100% auto; font-size:0; text-indent:-99999px; }
 #aside .btnConnect { position:relative; margin-left:23px; margin-bottom:38px; }
 #aside .btnConnect:before { content:''; width:180px; height:46px; position:absolute; left:4px; top:4px; background:#000; z-index:1; }
