@@ -150,6 +150,9 @@ textarea::placeholder { color:rgba(0,0,0,0.3); }
 
 #wrap { min-height:100%; position:relative; padding:0 280px 130px; background:url('../images/bgMain.jpg') center top no-repeat; background-size:cover; }
 
+#btnGnb { width:39px; height:39px; display:none; position:absolute; right:16px; top:25px; background:url('../images/btnGnb.png') center center no-repeat; background-size:100% auto; font-size:0; text-indent:-99999px; z-index:20; }
+#btnGnb.is--open { position:fixed; background-image:url('../images/btnMenuClose.png'); }
+
 #aside { width:230px; height:100%; padding-top:62px; position:fixed; left:0; top:0; background:#ffd548; border-right:6px solid #000; z-index:15; }
 #aside h1 { width:168px; height:68px; margin-bottom:53px; margin-left:39px; background:url('../images/imgSideLogo.png') center center no-repeat; background-size:100% auto; font-size:0; text-indent:-99999px; }
 #aside .btnConnect { position:relative; margin-left:23px; margin-bottom:38px; }
@@ -176,6 +179,7 @@ textarea::placeholder { color:rgba(0,0,0,0.3); }
 .boxNotice { height:54px; margin-top:52px; padding:0 20px; position:relative; border:1px solid #000; background-image: linear-gradient(to right, #4bffb3 7%, #00ffed 98%); overflow:hidden; line-height:52px; }
 .boxNotice .title { padding-left:25px; float:left; background:url('../images/iconNotice.png') left center no-repeat; background-size:16px; font-family:"Pretendard"; font-weight:700; }
 .boxNotice .cont { margin:0 70px 0 92px; } 
+.boxNotice .cont a { display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 .boxNotice .more { width:58px; height:23px; padding-left:12px; position:absolute; right:20px; top:50%; margin-top:-12px; background:#fff; border-radius:12px; line-height:23px; font-size:10px; font-family:"Pretendard"; }
 .boxNotice .more:after { content:''; width:3px; height:5px; margin-left:5px; display:inline-block; margin-top:-2px; background:url('../images/iconMore.png') center center no-repeat; background-size:100% auto; vertical-align:middle; }
 
@@ -250,11 +254,13 @@ textarea::placeholder { color:rgba(0,0,0,0.3); }
 .boxMyBalance .topToken>div.iconMatic:before { background-image:url('../images/iconMatic.png'); }
 .boxMyBalance .topToken>div.iconFnf:before { background-image:url('../images/iconFnf.png'); }
 .boxMyBalance .lineWallet { height:63px; position:relative; padding-left:25px; padding-right:210px; background:#c1fb83; border-radius:15px; border:1px solid #000; box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.4); line-height:61px; }
-.boxMyBalance .lineWallet p { position:relative; display:block; line-height:61px; font-size:16px; color:#000; }
+.boxMyBalance .lineWallet p { position:relative; display:block; line-height:61px; font-size:16px; color:#000; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 .boxMyBalance .lineWallet p:before { content:''; width:37px; height:37px; margin-right:15px; display:inline-block; background:url('../images/iconWallet.png') center center no-repeat; background-size:100% auto; border-radius:50%; overflow:hidden; vertical-align:middle; }
 .boxMyBalance .lineWallet .btnWallet { position:absolute; right:25px; top:50%; transform:translateY(-50%); }
 .boxMyBalance .lineWallet .btnWallet:before { content:''; width:162px; height:40px; position:absolute; right:-2px; bottom:-2px; background:#000; z-index:1; }
 .boxMyBalance .lineWallet .btnWallet span { width:162px; height:40px; display:block; position:relative; z-index:5; background:#fff; border:1px solid #000; text-align:center; line-height:38px; color:#000; font-size:14px; font-weight:500; }
+
+.boxMyBalance .lineWallet.is--connect p { padding-right:32px; }
 
 .btnShare { width:25px; height:30px; position:absolute; right:0; top:50%; background:url('../images/btnShare.png') center center no-repeat; background-size:15px auto; font-size:0; text-indent:-99999px; transform:translateY(-50%); }
 
@@ -265,7 +271,7 @@ textarea::placeholder { color:rgba(0,0,0,0.3); }
 .listReward li+li { margin-top:10px; }
 .listReward li .linkArea { height:56px; display:flex; align-items:center; padding:0 32px; position:relative; border-bottom:1px solid rgba(0,0,0,0.2); }
 .listReward li .linkArea .title { padding-left:25px; background:url('../images/iconNotice.png') left center no-repeat; background-size:16px auto; font-size:14px; font-weight:700; color:#000; }
-.listReward li .linkArea .link { margin-left:40px; font-size:14px; color:#000; }
+.listReward li .linkArea .link { margin-left:40px; font-size:14px; color:#000; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 .listReward li .linkArea .btnShare { right:30px; }
 .listReward li .contArea { padding:20px 200px 20px 46px; position:relative; }
 .listReward li .contArea .row { font-size:14px; color:#000; }
@@ -279,9 +285,9 @@ textarea::placeholder { color:rgba(0,0,0,0.3); }
 #footer { width:100%; height:130px; position:absolute; left:0; bottom:0; display:flex; align-items:center; justify-content:center; background:#000; z-index:20; }
 #footer .inner { overflow:hidden; }
 #footer h3 { width:141px; height:26px; float:left; background:url('../images/imgLogoFooter.png') center center no-repeat; background-size:100% auto; font-size:0; text-indent:-99999px; }
-#footer .copyright { float:left; position:relative; margin-left:8px; padding-left:8px; line-height:26px; color:rgba(255,255,255,.3); }
-#footer .copyright:before { content:''; width:1px; height:8px; position:absolute; left:0; top:50%; margin-top:-4px; background:rgba(255,255,255,.1); }
-#footer .copyright strong { margin-right:10px; font-family:"Poppins"; font-weight:700; font-size:14px; color:rgba(255,255,255,.4); }
+#footer .partner { float:left; margin-left:15px; padding-left:15px; position:relative; margin-right:20px; font-family:"Poppins"; font-weight:700; font-size:14px; color:rgba(255,255,255,.4); line-height:26px; }
+#footer .partner:before { content:''; width:1px; height:8px; position:absolute; left:0; top:50%; margin-top:-4px; background:rgba(255,255,255,.1); }
+#footer .copyright { float:left; position:relative; line-height:26px; color:rgba(255,255,255,.3); }
 
 .popBasic { width:100%; height:100%; position:fixed; left:0; top:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,0.5); overflow:auto; z-index:20; }
 .popBasic .inner { width:600px; padding:46px; position:relative; background:#ffd548; border:2px solid #000; box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.54); border-radius:25px; }
@@ -310,3 +316,129 @@ textarea::placeholder { color:rgba(0,0,0,0.3); }
 .popComplete .inner { padding:70px 50px 50px; }
 .popComplete .inner>.title { padding-top:102px; background:url('../images/iconPopComplete.png') center top no-repeat; background-size:130px auto; }
 .popComplete .btn { margin-top:70px; }
+
+@media screen and (max-width:1860px){
+	#wrap { padding:0 0 130px; }
+	#container { margin:0 0 0 280px; }
+}
+
+@media screen and (max-width:1600px){
+	#wrap { overflow-x:hidden; }
+	#container { margin-left:250px; margin-right:20px; }
+
+	.titleArea { padding:0; }
+	
+	.boxMainSlime .swiper-container { margin:0; overflow:visible; }
+	.boxMainSlime .swiper-button-next,
+	.boxMainSlime .swiper-button-prev { display:none; }
+}
+
+@media screen and (max-width:1280px){
+	#container { margin:0 20px; }
+
+	#btnGnb { display:block; }
+
+	#aside { width:293px; left:auto; right:-100%; padding-top:93px; border-right:0; border-left:6px solid #000; transition:all .3s; }
+	#aside.is--open { right:0; }
+}
+
+@media screen and (max-width:767px) {
+	.pc { display:none !important; }
+	.mo { display:block !important; }
+
+	#wrap { padding:0; }
+	
+	#aside h1 { width:200px; height:80px; margin-left:53px; margin-bottom:47px; }
+	#aside .btnConnect { margin-left:18px; }
+	#aside .btnConnect a { width:250px; height:68px; font-size:20px; line-height:68px; }
+	#aside .btnConnect:before { width:250px; height:68px; }
+	#gnb li:hover:after,
+	#gnb li.active:after { display:none; }
+	#gnb li a { font-size:22px; }
+
+	#logo { width:352px; height:134px; }
+
+	#container { padding-bottom:230px; margin:0; }
+	#container .topArea .txtCheckitems { margin:20px 40px 0; }
+	#container .topArea .txtCheckitems:after { width:49px; height:39px; right:0; top:-18px; }
+	#container .topArea .txtCheckitems img { width:282px; max-width:100%; }
+
+	.boxNotice { height:auto; padding:20px; margin:40px 16px 0; line-height:initial; }
+	.boxNotice .title { float:none; font-size:14px; background-size:18px auto; line-height:20px; }
+	.boxNotice .cont { margin:10px 0 0; }
+	.boxNotice .cont a { font-size:14px; }
+	.boxNotice .more { top:15px; margin:0; }
+
+	.titleArea { padding:0 16px; }
+	.titleArea .title.txt--slime { width:234px; height:30px; }
+	.titleArea .title.txt--myitem { width:100px; height:28px; }
+	.titleArea .title.txt--mybalance { width:150px; height:28px; }
+	.titleArea .title.txt--reward { width:99px; height:28px; }
+
+	.boxMainSlime .swiper-container { margin:0 0 50px 0; padding:25px 16px; }
+	.boxMainSlime .swiper-button-next,
+	.boxMainSlime .swiper-button-prev { display:none; }
+
+	.boxMyItem .titleArea { padding:0 16px; }
+	.boxMyItem .listMyItem { margin-left:16px; margin-right:16px; }
+	.boxMyItem .listMyItem li { padding:15px; }
+	.boxMyItem .listMyItem li .cont { height:auto; display:block; padding-top:7px; }
+	.boxMyItem .listMyItem li .thumb { width:125px; height:125px; }
+	.boxMyItem .listMyItem li .title { margin-top:10px; font-size:18px; }
+	.boxMyItem .listMyItem li .title:before { display:none !important; }
+	.boxMyItem .listMyItem li .txt { margin-top:10px; font-size:14px; }
+	.boxMyItem .listMyItem li .token { position:relative; right:0; top:0; font-weight:400; font-size:14px; transform:none; }
+
+	.boxMyBalance { padding:0 16px; }
+	.boxMyBalance .titleArea { padding:0; }
+	.boxMyBalance .topToken { height:auto; padding:9px 0; flex-direction:column; }
+	.boxMyBalance .topToken:before { width:69px; height:70px; left:auto; right:-2px; bottom:-12px; }
+	.boxMyBalance .topToken>div { padding:9px 20px; justify-content: flex-start; font-size:18px; }
+	.boxMyBalance .topToken>div:before { width:30px; height:30px; margin-right:16px; }
+	.boxMyBalance .topToken>div+div:after { width:auto; height:1px; left:18px; right:18px; margin:0; background:rgba(0,0,0,0.1); }
+	
+	.boxMyBalance .lineWallet { height:auto; padding:20px; line-height:inherit; }
+	.boxMyBalance .lineWallet p { min-height:30px; padding-left:40px; font-size:13px; line-height:17px; white-space:unset; }
+	.boxMyBalance .lineWallet p:before { width:30px; height:30px; position:absolute; left:0; top:0; }
+	.boxMyBalance .lineWallet .btnWallet { width:162px; display:block; margin:18px auto 0; position:relative; right:0; top:0; transform:none; }
+	
+
+	.boxReward { padding:0 16px; }
+	.boxReward .titleArea { padding:0; }
+	.listReward li+li { margin-top:16px; }
+	.listReward li .linkArea { height:auto; padding:20px 40px 15px 20px; display:block; }
+	.listReward li .linkArea .link { margin:8px 0 0; }
+	.listReward li .linkArea .btnShare { right:15px; top:15px; transform:none; }
+	.listReward li .contArea { display:flex; flex-direction:column; padding:20px; text-align:center; }
+	.listReward li .contArea .row strong { display:block; }
+	.listReward li .contArea .row+.row { margin-top:10px; }
+	.listReward li .contArea .row.imp { order:3; }
+	.listReward li .contArea .btnReward { width:162px; display:block; margin:10px auto; position:relative; right:0; top:0; transform:none; order:2; }
+
+	#footer { display:block; padding-top:30px; text-align:center; }
+	#footer h3 { width:118px; height:22px; float:none; display:inline-block; vertical-align:middle; }
+	#footer .partner { float:none; display:inline-block; padding-left:12px; margin-left:12px; margin-right:0; vertical-align:middle; line-height:22px; font-size:11px; }
+	#footer .copyright { margin-top:9px; float:none; line-height:22px; }
+
+	.popBasic { padding:20px 16px; align-items:baseline; }
+	.popBasic .inner { width:100%; padding:36px 14px 28px; }
+	.popBasic .inner>.title { margin-bottom:20px; font-size:18px; }
+	.popBasic .close { right:22px; top:22px; }
+	.popBasic .btn a.btnPop { width:100%; max-width:270px; margin:0 16px; }
+	.popBasic .btn a.btnPop:before { width:100%; height:58px; }
+	.popBasic .btn a.btnPop span { width:auto; height:58px; font-size:18px; line-height:58px; }
+
+	.popComplete .inner { padding-top:55px; margin-top:180px; }
+	.popComplete .btn { margin-top:48px; }
+
+	.popItemBuy .thumb { height:260px; }
+	.popItemBuy .thumb .bedge { right:10px; top:10px; }
+	.popItemBuy .cont dl { padding:16px 15px 8px; margin-bottom:13px; }
+	.popItemBuy .cont dl dt { margin-top:0; font-size:14px; }
+	.popItemBuy .cont dl dd { margin-top:0; margin-left:90px; font-size:14px; }
+	.popItemBuy .cont dl dd strong { font-size:16px; }
+	.popItemBuy .cont dl dd.price { font-size:16px; }
+	.popItemBuy .cont dl dd.price span { font-size:16px; }
+	.popItemBuy .cont p { font-size:13px; }
+	
+}
