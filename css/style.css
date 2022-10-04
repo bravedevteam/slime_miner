@@ -158,6 +158,7 @@ textarea::placeholder { color:rgba(0,0,0,0.3); }
 #aside .btnConnect { position:relative; margin-left:23px; margin-bottom:38px; }
 #aside .btnConnect:before { content:''; width:180px; height:46px; position:absolute; left:4px; top:4px; background:#000; z-index:1; }
 #aside .btnConnect a { width:180px; height:46px; display:block; position:relative; background:#fff; border:1px solid #000; text-align:center; line-height:46px; z-index:2; font-family:"LoRes12OT"; font-weight:700; color:#000; font-size:16px; }
+#aside .btnConnect span { width:180px; height:46px; display:block; position:relative; background:#fff; border:1px solid #000; text-align:center; line-height:46px; z-index:2; color:#000; font-size:14px; }
 
 #gnb { text-align:center; }
 #gnb li { position:relative; }
@@ -348,9 +349,10 @@ textarea::placeholder { color:rgba(0,0,0,0.3); }
 
 	#wrap { padding:0; }
 	
-	#aside h1 { width:200px; height:80px; margin-left:53px; margin-bottom:47px; }
+	#aside h1 { width:138px; height:55px; margin:0 auto 35px; }
 	#aside .btnConnect { margin-left:18px; }
 	#aside .btnConnect a { width:250px; height:68px; font-size:20px; line-height:68px; }
+	#aside .btnConnect span { width:250px; height:68px; line-height:68px; }
 	#aside .btnConnect:before { width:250px; height:68px; }
 	#gnb li:hover:after,
 	#gnb li.active:after { display:none; }
@@ -418,7 +420,7 @@ textarea::placeholder { color:rgba(0,0,0,0.3); }
 	#footer { display:block; padding-top:30px; text-align:center; }
 	#footer h3 { width:118px; height:22px; float:none; display:inline-block; vertical-align:middle; }
 	#footer .partner { float:none; display:inline-block; padding-left:12px; margin-left:12px; margin-right:0; vertical-align:middle; line-height:22px; font-size:11px; }
-	#footer .copyright { margin-top:9px; float:none; line-height:22px; }
+	#footer .copyright { margin-top:9px; float:none; line-height:19px; font-size:14px; font-weight:500; }
 
 	.popBasic { padding:20px 16px; align-items:baseline; }
 	.popBasic .inner { width:100%; padding:36px 14px 28px; }
