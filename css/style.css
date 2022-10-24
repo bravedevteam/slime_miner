@@ -318,6 +318,15 @@ textarea::placeholder { color:rgba(0,0,0,0.3); }
 .popComplete .inner>.title { padding-top:102px; background:url('../images/iconPopComplete.png') center top no-repeat; background-size:130px auto; }
 .popComplete .btn { margin-top:70px; }
 
+.boxLoading { width:100%; height:100%; position:fixed; left:0; top:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,0.5); overflow:auto; z-index:20; }
+.boxLoading .inner { width:518px; height:318px; padding-top:104px; background:#c1fb83; border:2px solid #000; border-radius:25px; box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.54); text-align:center; }
+.boxLoading .boxProgress { width:230px; margin:0 auto; position:relative; }
+.boxLoading .boxProgress .icon { width:45px; height:42px; position:absolute; left:0; bottom:100%; margin-left:-22px; background:url('../images/iconLoading.png') center center no-repeat; background-size:100% auto; font-size:0; text-indent:-99999px; transition:all .5s; }
+.boxLoading .boxProgress .progress_bg { height:30px; position:relative; border:2px solid #000; border-radius:7px; background:#fff; box-shadow: inset 0 3px 6px 0 rgba(0, 0, 0, 0.16); overflow:hidden; }
+.boxLoading .boxProgress .progress_bg .bar { width:0; height:100%; position:absolute; left:0; top:0; background-image: linear-gradient(to right, #ff4e00 0%, #d800ff 100%); transition:all .5s; }
+.boxLoading .title { margin-top:25px; font-size:18px; font-weight:700; color:#000; }
+.boxLoading .desc { margin-top:10px; font-size:14px; color:#000; }
+
 @media screen and (max-width:1860px){
 	#wrap { padding:0 0 130px; }
 	#container { margin:0 0 0 280px; }
@@ -443,4 +452,5 @@ textarea::placeholder { color:rgba(0,0,0,0.3); }
 	.popItemBuy .cont dl dd.price span { font-size:16px; }
 	.popItemBuy .cont p { font-size:13px; }
 	
+	.boxLoading .inner { width:100%; height:260px; margin:0 16px; }
 }

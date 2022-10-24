@@ -223,6 +223,20 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- 로딩 팝업 -->
+	<div class="boxLoading" style="display:flex;">
+		<div class="inner">
+			<div class="boxProgress">
+				<div class="icon"></div>
+				<div class="progress_bg">
+					<div class="bar"></div>
+				</div>
+			</div>
+			<div class="title">Loading...</div>
+			<div class="desc">잠시만 기다려주세요.</div>
+		</div>
+	</div>
 </body>
 <script type="text/javascript">
 	var swiper = new Swiper('.boxMainSlime .swiper-container', {
@@ -233,6 +247,17 @@
 			nextEl: ".boxMainSlime .swiper-button-next",
 			prevEl: ".boxMainSlime .swiper-button-prev",
 		},
+	});
+
+	$(function(){
+		setTimeout(function(){
+			$(".boxProgress .bar").css("width", "100%");
+			$(".boxProgress .icon").css("left", "100%");
+		}, 1000);
+
+		setTimeout(function(){
+			$(".boxLoading").hide();
+		}, 2000);
 	});
 </script>
 </html>
